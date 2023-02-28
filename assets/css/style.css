@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "Outfit", sans-serif;
+  }
+}
+
+@layer components {
+  body {
+    @apply m-0 p-0 box-border;
+  }
+  /* Default Button Style Area */
+  .defaultButton {
+    @apply py-2 px-5 md:py-3 md:px-6 inline-block relative rounded-lg font-Outfit text-sm md:text-xl font-medium text-slate-900 leading-8 overflow-hidden hover:before:h-full before:transition-all before:duration-500 before:w-full before:h-0 before:bg-blue-500 before:rounded-lg before:ease-in-out before:absolute before:top-0 before:left-0 before:z-0 hover:text-white after:transition-all after:duration-500 after:w-full after:h-full after:bg-white after:rounded-lg after:ease-in-out after:absolute after:bottom-0 after:left-0 after:z-0 hover:after:h-0 transition-all duration-500;
+  }
+
+  .defaultButton span {
+    @apply relative z-10;
+  }
+
+  .activeButton {
+    @apply before:h-full after:h-0 text-white;
+  }
+
+  /* Section Title Area */
+  .section-heading {
+    @apply mx-auto max-w-3xl text-center;
+  }
+
+  .section-heading h3 {
+    @apply text-slate-900 text-2xl md:text-4xl lg:text-5xl font-Outfit font-semibold pb-5;
+  }
+
+  .section-heading p {
+    @apply text-slate-900 text-opacity-80 text-base lg:text-xl font-Outfit font-normal;
+  }
+
+  .section-heading2 h3 {
+    @apply font-normal text-2xl md:text-4xl lg:text-5xl leading-tight text-slate-900;
+  }
+
+  /* Nav Area Style */
+
+  .navArea {
+    @apply py-8 relative;
+  }
+
+  .navbar-nav {
+    @apply m-0 p-0 list-none;
+  }
+
+  .navbar-nav li {
+    @apply inline-block;
+  }
+
+  .navbar-nav li a {
+    @apply font-Outfit pb-1 font-normal text-white text-xl mx-4 leading-8 relative before:w-0 before:h-[1px] before:bg-white before:absolute before:left-0 before:bottom-0 hover:before:w-full before:transition-all before:duration-500;
+  }
+
+  .menu-sidebar {
+    @apply md:relative md:right-auto ml-4;
+  }
+
+  .menu-sidebar .defaultButton {
+    @apply py-2 px-7 border border-slate-100 after:bg-transparent;
+  }
+
+  .menu-sidebar .defaultButton span {
+    @apply text-base text-white;
+  }
+
+  /* Responsive mean menu */
+  .main-responsive-nav {
+    @apply min-h-[69px];
+  }
+
+  .mean-container .mean-nav {
+    @apply mt-[56px] bg-slate-900 bg-opacity-60 backdrop-blur-md;
+  }
+
+  .mean-container .mean-bar {
+    @apply !bg-transparent py-3 z-30 absolute;
+  }
+
+  .mean-container a.meanmenu-reveal {
+    @apply top-[11px];
+  }
+
+  .mean-container a.meanmenu-reveal span {
+    @apply bg-white;
+  }
+
+  .mean-container a.meanmenu-reveal.meanclose {
+    @apply text-white;
+  }
+
+  .mean-container .mean-nav ul li a {
+    @apply text-base py-3 border-t-[.2px] border-t-slate-700;
+  }
+
+  /* Banner Style Area */
+  .banner-content {
+    @apply relative before:w-full before:h-20 before:md:h-44 before:bg-white before:absolute before:bottom-0 before:left-0 before:z-0;
+  }
+
+  .banner-content .demoImg {
+    @apply w-full max-w-7xl rounded-lg overflow-hidden mx-auto relative z-20;
+  }
+
+  .banner-content .shapes {
+    @apply w-full h-full absolute top-0 left-0 z-10;
+  }
+
+  .banner-content .shapes .shape1 {
+    @apply absolute top-14 left-1/4;
+  }
+
+  .banner-content .shapes .shape2 {
+    @apply absolute top-1/4 left-14;
+  }
+
+  .banner-content .shapes .shape3 {
+    @apply absolute top-2/4 left-72;
+  }
+
+  .banner-content .shapes .shape4 {
+    @apply absolute bottom-1/2 right-20;
+  }
+
+  .banner-content .shapes .shape5 {
+    @apply absolute top-20 right-24;
+  }
+
+  .bannerTextContent {
+    @apply py-12 md:py-24 md:pt-48 max-w-4xl mx-auto text-center relative z-20;
+  }
+  .bannerTextContent h1 {
+    @apply font-Outfit font-semibold text-3xl lg:text-5xl mx-auto max-w-[750px] text-white leading-tight;
+  }
+
+  .bannerTextContent h1 br {
+    @apply hidden lg:inline-block;
+  }
+
+  .bannerTextContent p {
+    @apply font-Outfit font-normal text-base md:text-xl text-white leading-6 md:leading-9 mt-5;
+  }
+
+  .groupButton {
+    @apply mt-8;
+  }
+
+  /* Technology Style Area */
+  .technologyCard {
+    @apply bg-white text-center shadow-md py-5 h-28 w-28 rounded-lg border border-slate-100;
+  }
+
+  .technologyCard img {
+    @apply w-12 h-12 mb-2 mx-auto;
+  }
+
+  .technologyCard h4 {
+    @apply font-Outfit font-medium text-slate-900 text-base;
+  }
+
+  /* Creative Layout Style CSS */
+  .bgStyle {
+    @apply bg-cover bg-center bg-no-repeat;
+  }
+
+  .layoutSlide img {
+    @apply p-4 border-2 border-slate-200 rounded-lg transition-all duration-500 hover:border-slate-600 cursor-grab;
+  }
+
+  .slick-center .layoutSlide img {
+    @apply border-slate-600;
+  }
+
+  .layoutSlide h3 {
+    @apply font-Outfit text-base font-medium text-slate-900 pt-3;
+  }
+
+  .layoutTheme img {
+    @apply p-4 border-2 border-slate-400 rounded-lg;
+  }
+
+  .layoutTheme h3 {
+    @apply font-Outfit font-normal text-lg md:text-xl xl:text-3xl text-slate-900 text-center pt-3;
+  }
+
+  /* Why Dashboard Style CSS */
+  .whyWeCard {
+    @apply py-5 px-4 sm:pl-7 md:pl-28 sm:pr-7 relative rounded-lg transition-all duration-500 hover:shadow-md;
+  }
+
+  .whyWeCard .whyWeCardIcon {
+    @apply relative md:absolute md:left-7 mb-3 md:mb-0 w-16 h-16 bg-white flex items-center justify-center text-3xl rounded-md text-slate-600;
+  }
+
+  .whyWeCard h3 {
+    @apply font-Outfit font-normal text-xl xl:text-2xl text-slate-900 leading-10 mb-0 sm:mb-3;
+  }
+
+  .whyWeCard p {
+    @apply font-Outfit font-light text-lg xl:text-xl text-slate-900 text-opacity-80;
+  }
+
+  /* Counter Card */
+  .counterCard {
+    @apply text-center relative before:w-0 sm:before:w-[1px] before:h-full before:absolute before:right-0 before:top-1/2 before:-translate-y-1/2 before:bg-slate-50 before:opacity-10;
+  }
+
+  .counterCard h2 {
+    @apply font-Outfit font-semibold text-4xl md:text-5xl leading-6 text-white mb-3;
+  }
+  .counterCard h3 {
+    @apply font-Outfit font-normal text-base md:text-xl text-white leading-8;
+  }
+
+  .counterCard.lastCard {
+    @apply before:w-0 before:content-none;
+  }
+
+  /* Applicaton Style Area */
+  .applicationCard h3 {
+    @apply font-Outfit font-normal text-xl xl:text-3xl text-white;
+  }
+
+  /* Awesome Preview Style Area */
+  .swiper-slide h3 {
+    @apply text-lg md:text-2xl text-white font-Outfit font-medium mt-5 text-center opacity-0 transition-all duration-500;
+  }
+
+  .swiper-slide img {
+    @apply rounded-md;
+  }
+
+  .swiper-slide img {
+    @apply opacity-50;
+  }
+
+  /* Component Card Style Area */
+  .componentCard {
+    @apply border border-slate-200 rounded-md transition-all duration-500 hover:shadow-md py-7 px-4 text-center;
+  }
+
+  .componentCard iconify-icon {
+    @apply text-4xl text-slate-900;
+  }
+
+  .componentCard h3 {
+    @apply sm:text-lg md:text-xl xl:text-2xl 2xl:text-2xl font-Outfit font-normal text-slate-900 pt-2;
+  }
+
+  /* Pricng Style Area */
+  .saveMoney {
+    @apply bg-gradient-to-b from-[#330867] to-[#334155] rounded-md overflow-hidden;
+  }
+
+  .saveMoney .textArea {
+    @apply pt-8 px-6;
+  }
+
+  .saveMoney .textArea h3 {
+    @apply font-Outfit font-normal text-white text-5xl leading-tight mb-5 px-2;
+  }
+
+  .saveMoney .textArea p {
+    @apply font-Outfit font-normal text-white text-base leading-8 text-opacity-80 mb-4 last:mb-0;
+  }
+
+  .pricingCard {
+    @apply bg-slate-100 py-6 px-5 lg:px-8 mt-8 rounded-lg;
+  }
+
+  .pricingCard .heading {
+    @apply flex items-start justify-between;
+  }
+
+  .pricingCard .heading h3 {
+    @apply font-Outfit font-semibold text-2xl sm:text-3xl lg:text-3xl xl:text-4xl text-slate-900 leading-10 mb-1;
+  }
+
+  .pricingCard .heading p {
+    @apply font-Outfit font-normal text-base sm:text-xl md:text-2xl text-slate-900 md:leading-10 text-opacity-80;
+  }
+
+  .pricingCard .heading .price {
+    @apply relative before:absolute before:w-1/2 before:h-1 before:bg-slate-900 before:-bottom-2 before:left-0;
+  }
+
+  .pricingCard .pricingList h4 {
+    @apply font-Outfit font-semibold text-slate-900 text-lg lg:text-xl md:text-2xl leading-8;
+  }
+
+  .pricingCard .pricingList ul li {
+    @apply pl-8 py-2 font-Outfit font-normal sm:text-lg md:text-base lg:text-xl text-slate-900 relative;
+  }
+
+  .pricingCard .pricingList ul li iconify-icon {
+    @apply absolute left-0 top-3;
+  }
+
+  .pricingCard .pricingList ul li .check {
+    @apply text-green-700;
+  }
+
+  .pricingCard .pricingList ul li .uncheck {
+    @apply text-red-700;
+  }
+
+  .pricingCard .pricingList .defaultButton {
+    @apply w-3/4 mx-auto block after:bg-white before:bg-slate-900 text-center text-slate-900 mt-8 hover:text-white border border-slate-900;
+  }
+
+  .extendedPrice {
+    @apply bg-gradient-to-b from-[#330867] to-[#334155] rounded-md overflow-hidden;
+  }
+
+  .extendedPrice .heading h3,
+  .extendedPrice .heading p,
+  .extendedPrice .pricingList h4,
+  .extendedPrice .pricingList ul li {
+    @apply text-white;
+  }
+
+  .extendedPrice .heading .price {
+    @apply before:bg-white;
+  }
+
+  /* Accordion Style Area */
+  .acc__card {
+    @apply mt-4 relative;
+  }
+  .acc__title {
+    @apply bg-slate-100 text-slate-900 cursor-pointer block py-4 pr-3 sm:pr-5 pl-8 sm:pl-14  relative text-left before:w-2 before:h-2 before:border-l before:border-b before:border-b-slate-800 before:border-l-slate-800 before:absolute before:top-7 before:left-3 before:sm:left-7 before:-rotate-45 before:transition-all before:duration-500 font-Outfit font-medium md:font-normal md:leading-8 text-base md:text-xl rounded-md;
+  }
+  .acc__title.active {
+    @apply before:rotate-[135deg];
+  }
+
+  .acc__panel {
+    @apply hidden py-5 px-5 md:px-12 rounded-b-xl leading-8;
+  }
+
+  .acc__panel p {
+    @apply font-Outfit text-base xl:text-lg font-light text-slate-800 mb-4;
+  }
+
+  .acc__panel a {
+    @apply font-Outfit text-base xl:text-lg font-normal text-slate-800 bg-opacity-50;
+  }
+
+  /* Footer Style Area */
+  .footer {
+    @apply bg-gradient-to-b from-[#330867] to-[#170F2A] relative;
+  }
+
+  .newsletterArea {
+    @apply relative before:w-full before:h-3/4 before:absolute before:top-0 before:left-0 before:bg-white;
+  }
+
+  .newsletterArea .section-content {
+    @apply bg-slate-100 rounded-lg relative p-4 sm:py-8 lg:py-20 sm:px-8 lg:px-10 z-10 overflow-hidden;
+  }
+
+  .newsletterArea .section-content .content {
+    @apply max-w-2xl mx-auto;
+  }
+
+  .newsletterArea .content h3 {
+    @apply font-Outfit font-semibold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-snug text-slate-900;
+  }
+
+  .newsletterArea .content h4 {
+    @apply font-Outfit font-semibold text-4xl xl:text-5xl 2xl:text-7xl text-slate-500 text-opacity-10 -z-10 !leading-3;
+  }
+
+  .newsletterArea .content .versionName li {
+    @apply py-1 px-3 sm:py-2 sm:px-5 text-center border border-slate-300 font-Outfit font-medium text-slate-900 text-sm sm:text-base inline-block rounded-md;
+  }
+
+  .newsletterArea .content p {
+    @apply font-Outfit text-base leading-6 font-light text-slate-900 text-opacity-80;
+  }
+
+  .newsletterArea .content .defaultButton {
+    @apply after:bg-slate-800 text-white rounded-none before:bg-slate-900 before:rounded-none after:rounded-none;
+  }
+
+  .newsletterArea .content form {
+    @apply inline-flex items-center border border-slate-800 rounded-md overflow-hidden w-full max-w-lg mt-4 xl:mt-8;
+  }
+
+  .newsletterArea .content form input {
+    @apply py-3 px-5 block focus:outline-none focus:shadow-none bg-transparent w-full font-Outfit font-normal text-base text-slate-900;
+  }
+
+  .newsletterArea .content form .defaultButton {
+    @apply w-48 text-base xl:text-lg py-3;
+  }
+
+  .newsletterArea .supportCard h5 {
+    @apply font-Outfit font-normal text-xl md:text-2xl text-slate-900 leading-8 my-4 xl:my-3;
+  }
+
+  .newsletterArea .supportCard .defaultButton {
+    @apply rounded-lg mt-5 text-base xl:text-lg;
+  }
+}
+/* For Sticky Nav */
+.isSticky {
+  @apply bg-gradient-to-b from-violet-800 to-[#425c80d0] !sticky top-0 z-50 transition-all duration-500;
+}
+
+/* Slilck SLider Styles */
+.slick-slide {
+  @apply my-0 mx-3;
+}
+
+.slick-list {
+  @apply my-0 -mx-3;
+}
+
+.slick-arrow {
+  @apply w-8 md:w-12 h-8 md:h-12 bg-slate-500 text-white flex items-center justify-center rounded-full text-xl absolute top-1/2 -translate-y-1/2 z-20 cursor-pointer transition-all duration-500 hover:bg-slate-900;
+}
+
+.slick-arrow.next {
+  @apply right-0 md:-right-6;
+}
+.slick-arrow.prev {
+  @apply left-0 md:-left-6;
+}
+
+.swiper-slide-active h3 {
+  @apply !opacity-100;
+}
+
+.swiper-slide-active img {
+  @apply !opacity-100 !z-40;
+}
+
+.simply-scroll {
+  @apply w-full h-auto;
+}
+
+.simply-scroll .simply-scroll-clip {
+  @apply w-full h-auto;
+}
+
+.simply-scroll .simply-scroll-list li {
+  @apply w-auto h-auto px-4;
+}
+
+.responsiveMode a {
+  @apply px-5;
+}

@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DashCode - Admin Dashboard Template.">
+  <meta name="keywords" content="admin, admin dashboard, admin template, admin theme,  admin panel, vue, vue 3, vue js, vue admin, tailwind, tailwind css, tailwind template, tailwind admin, backend, dashcode">
+  <meta name="author" content="Codeshaper">
+  <title>DashCode - Admin Dashboard Template</title>
+  <link rel="icon" type="icon" href="assets/images/logo.svg">
+
+  <!-- Links Of CSS -->
+  <link rel="stylesheet" href="assets/css/slick.css" />
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css" />
+  <link rel="stylesheet" href="assets/css/simplyScroll.css">
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style type="text/css">
+    img{
+      max-width: 100%;
+    }
+
+    .demo-single {
+        background: #F5F5F7;
+        padding: 50px;
+        border-radius: 10px;
+        border: 1px solid #0f178a0a;
+    }
+
+    .demo-single > img {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 1px 2px 110px #0000001c;
+    }
+
+    .demo-single h3 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #083943;
+        margin-bottom: 20px;
+    }
+
+    .action-btn a {
+        background: #fff;
+        padding: 10px 25px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+    .action-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .action-btn a:first-child {
+        background: #1d2a3d;
+        color: #fff;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-area" data-offset="100">
+
+  <!-- Navbar Area Start -->
+  <div class="navbar-area relative z-40" id="navbar_area">
+    <div class="main-responsive-nav bg-slate-700 lg:hidden">
+      <div class="container mx-auto">
+        <div class="mobile-nav mean-container md:hidden relative">
+          <a href="index.html" class="logo absolute top-[19px] left-2 z-40 flex items-center">
+            <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6C0 2.68629 2.68629 0 6 0H42C45.3137 0 48 2.68629 48 6V48H6C2.68629 48 0 45.3137 0 42V6Z"
+                fill="white" />
+              <path
+                d="M31.4 38.36C29.624 38.36 27.968 38.036 26.432 37.388C24.92 36.74 23.6 35.828 22.472 34.652C21.344 33.476 20.468 32.12 19.844 30.584C19.244 29.024 18.944 27.356 18.944 25.58C18.944 23.804 19.244 22.148 19.844 20.612C20.468 19.052 21.332 17.696 22.436 16.544C23.564 15.392 24.884 14.492 26.396 13.844C27.908 13.196 29.54 12.872 31.292 12.872C33.188 12.872 34.88 13.208 36.368 13.88C37.88 14.552 39.2 15.476 40.328 16.652L38.528 18.452C37.664 17.492 36.62 16.748 35.396 16.22C34.172 15.668 32.804 15.392 31.292 15.392C29.9 15.392 28.616 15.644 27.44 16.148C26.288 16.652 25.268 17.372 24.38 18.308C23.516 19.22 22.844 20.3 22.364 21.548C21.908 22.772 21.68 24.116 21.68 25.58C21.68 27.044 21.92 28.4 22.4 29.648C22.88 30.896 23.552 31.988 24.416 32.924C25.28 33.836 26.3 34.544 27.476 35.048C28.652 35.552 29.936 35.804 31.328 35.804C32.912 35.804 34.316 35.528 35.54 34.976C36.788 34.424 37.844 33.668 38.708 32.708L40.508 34.544C39.404 35.72 38.084 36.656 36.548 37.352C35.012 38.024 33.296 38.36 31.4 38.36Z"
+                fill="#0F172A" />
+              <path
+                d="M11.94 38V33.644H18.384C20.016 33.644 21.444 33.308 22.668 32.636C23.892 31.94 24.84 30.968 25.512 29.72C26.208 28.472 26.556 26.996 26.556 25.292C26.556 23.636 26.208 22.196 25.512 20.972C24.816 19.724 23.856 18.764 22.632 18.092C21.408 17.396 19.992 17.048 18.384 17.048H11.832V12.692H18.456C20.328 12.692 22.056 13.004 23.64 13.628C25.248 14.252 26.64 15.14 27.816 16.292C29.016 17.42 29.94 18.752 30.588 20.288C31.26 21.824 31.596 23.504 31.596 25.328C31.596 27.152 31.26 28.844 30.588 30.404C29.94 31.94 29.028 33.284 27.852 34.436C26.676 35.564 25.284 36.44 23.676 37.064C22.092 37.688 20.376 38 18.528 38H11.94ZM8.592 38V12.692H13.488V38H8.592Z"
+                fill="#0F172A" />
+            </svg>
+            <span class="ml-3 text-lg leading-8 text-white font-Outfit font-semibold">Dashcode</span>
+          </a>
+          <ul class="menu-sidebar menu-small-device absolute right-12 z-40 top-[11px]">
+            <li><a href="https://themeforest.net/item/dashcode-admin-dashboard-template/42600453" class="defaultButton !px-6 !py-1"><span>Buy Now</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main-nav hidden lg:block">
+      <div class="container mx-auto">
+        <nav class="navbar flex justify-between items-center py-3">
+          <a class="navbar-brand flex items-center" href="index.html">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6C0 2.68629 2.68629 0 6 0H42C45.3137 0 48 2.68629 48 6V48H6C2.68629 48 0 45.3137 0 42V6Z"
+                fill="white" />
+              <path
+                d="M31.4 38.36C29.624 38.36 27.968 38.036 26.432 37.388C24.92 36.74 23.6 35.828 22.472 34.652C21.344 33.476 20.468 32.12 19.844 30.584C19.244 29.024 18.944 27.356 18.944 25.58C18.944 23.804 19.244 22.148 19.844 20.612C20.468 19.052 21.332 17.696 22.436 16.544C23.564 15.392 24.884 14.492 26.396 13.844C27.908 13.196 29.54 12.872 31.292 12.872C33.188 12.872 34.88 13.208 36.368 13.88C37.88 14.552 39.2 15.476 40.328 16.652L38.528 18.452C37.664 17.492 36.62 16.748 35.396 16.22C34.172 15.668 32.804 15.392 31.292 15.392C29.9 15.392 28.616 15.644 27.44 16.148C26.288 16.652 25.268 17.372 24.38 18.308C23.516 19.22 22.844 20.3 22.364 21.548C21.908 22.772 21.68 24.116 21.68 25.58C21.68 27.044 21.92 28.4 22.4 29.648C22.88 30.896 23.552 31.988 24.416 32.924C25.28 33.836 26.3 34.544 27.476 35.048C28.652 35.552 29.936 35.804 31.328 35.804C32.912 35.804 34.316 35.528 35.54 34.976C36.788 34.424 37.844 33.668 38.708 32.708L40.508 34.544C39.404 35.72 38.084 36.656 36.548 37.352C35.012 38.024 33.296 38.36 31.4 38.36Z"
+                fill="#0F172A" />
+              <path
+                d="M11.94 38V33.644H18.384C20.016 33.644 21.444 33.308 22.668 32.636C23.892 31.94 24.84 30.968 25.512 29.72C26.208 28.472 26.556 26.996 26.556 25.292C26.556 23.636 26.208 22.196 25.512 20.972C24.816 19.724 23.856 18.764 22.632 18.092C21.408 17.396 19.992 17.048 18.384 17.048H11.832V12.692H18.456C20.328 12.692 22.056 13.004 23.64 13.628C25.248 14.252 26.64 15.14 27.816 16.292C29.016 17.42 29.94 18.752 30.588 20.288C31.26 21.824 31.596 23.504 31.596 25.328C31.596 27.152 31.26 28.844 30.588 30.404C29.94 31.94 29.028 33.284 27.852 34.436C26.676 35.564 25.284 36.44 23.676 37.064C22.092 37.688 20.376 38 18.528 38H11.94ZM8.592 38V12.692H13.488V38H8.592Z"
+                fill="#0F172A" />
+            </svg>
+            <span class="ml-3 text-4xl leading-8 text-white font-Outfit font-semibold">Dashcode</span>
+          </a>
+          <div class="mean-menu md:!flex items-center">
+            <ul class="navbar-nav inline-block">
+              <li class="inline-block"><a href="#themes">Layouts</a></li>
+              <li class="inline-block"><a href="#apps">Apps</a></li>
+              <li class="inline-block"><a href="#features">Features</a></li>
+              <li class="inline-block"><a href="#pages">Pages</a></li>
+              <li class="inline-block"><a href="#pricing">Pricing</a></li>
+              <li class="inline-block"><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="menu-sidebar hidden md:inline-block">
+              <ul>
+                <li><a href="#" class="defaultButton"><span>Buy Now</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar Area End -->
+
+  <!-- Banner Area Start -->
+  <div class="relative lg:-top-24 bg-[url('/assets/images/banner/hero-bg.jpg')] bg-cover bg-center bg-no-repeat bg-indigo-500" style="background-image: url('assets/images/banner/hero-bg.jpg');">
+    <div class="banner-content">
+      <div class="container mx-auto px-4">
+        <div class="shapes hidden md:block ">
+          <img class="shape1" data-speed="0.05" data-revert="true" src="assets/images/banner/shape.png" alt="shape" loading="lazy">
+          <img class="shape2" data-speed="0.1" data-revert="true" src="assets/images/banner/shape2.png" alt="shape" loading="lazy">
+          <img class="shape3" data-speed="0.15" data-revert="true" src="assets/images/banner/shape3.png" alt="shape" loading="lazy">
+          <img class="shape4" data-speed="0.2" data-revert="true" src="assets/images/banner/shape4.png" alt="shape" loading="lazy">
+          <img class="shape5" data-speed="0.05" data-revert="true" src="assets/images/banner/shape5.png" alt="shape" loading="lazy">
+        </div>
+        <div class="bannerTextContent">
+          <h1>Build your dream app using <br> the most powerful admin template</h1>
+          <p>We present you with the most powerful, simplest, and fastest developer-friendly and highly customizable React, Vue and
+            Tailwind admin templates to build web UI for your app.</p>
+          <div class="groupButton space-x-6">
+            <a href="https://dashcode.codeshaper.net/" target="_blank" class="defaultButton activeButton"><span>View
+                Demo</span></a>
+            <a href="https://dashcode-doc.codeshaper.tech/" target="_blank"
+              class="defaultButton"><span>Documentation</span></a>
+          </div>
+        </div>
+        <img src="assets/images/banner/banner.png" class="demoImg" alt="image">
+      </div>
+    </div>
+  </div>
+  <!-- Banner Area End -->
+
+  <!-- Technology Area Start -->
+  <div class="technology py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex flex-wrap gap-4 items-center justify-around lg:justify-between">
+        <div class="technologyCard">
+          <img src="assets/images/icon/react-logo.png" alt="React" loading="lazy">
+          <h4>React</h4>
+        </div>
+        <div class="technologyCard">
+          <img src="assets/images/icon/vue.png" alt="vue" loading="lazy">
+          <h4>Vue 3</h4>
+        </div>
+        <div class="technologyCard">
+          <img src="assets/images/icon/tailwind.png" alt="tailwind css" loading="lazy">
+          <h4>Tailwind CSS</h4>
+        </div>
+        <div class="technologyCard">
+          <img src="assets/images/icon/html-5.png" alt="html5" loading="lazy">
+          <h4>HTML5</h4>
+        </div>
+        <div class="technologyCard">
+          <img src="assets/images/icon/sass.png" alt="sass" loading="lazy">
+          <h4>SCSS</h4>
+        </div>
+        <div class="technologyCard">
+          <img src="assets/images/icon/headlessui.png" alt="headlessui" loading="lazy">
+          <h4>Headless UI</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Technology Area End -->
+
+  <!-- Avaliable version Area Start -->
+  <div class="abaliable-version">
+    <div class="container mx-auto px-4">
+      <div class="section-heading">
+        <h3>Avalible Version</h3>
+      </div>
+      <div class="section-content mt-6 pb-12 border-b border-b-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="demo-single">
+            <h3 style="color: #52c2df;">React Version</h3>
+              <img src="assets/images/1.jpg" alt="test" />
+              <div class="action-btn">
+                <a href="http://dashcode-react.codeshaper.net/" target="__blank" class="btn">Demo</a>
+                <a href="https://dashcode-react-doc.codeshaper.tech" target="__blank" class="btn">Documentation</a>
+              </div>
+          </div>
+          <div class="demo-single">
+              <h3 style="color: #41b883;">Vue Version</h3>
+              <img src="assets/images/2.jpg" alt="test" />
+              <div class="action-btn">
+                <a href="https://dashcode.codeshaper.net/" target="__blank" class="btn">Demo</a>
+                <a href="https://dashcode-doc.codeshaper.tech/" target="__blank" class="btn">Documentation</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Avaliable version Area End -->
+
+
+  <!-- Creative layOut Start -->
+  <div class="bgStyle bg-[url('/assets/images/CreativeLayoutBG.png')] pt-10 lg:pt-24" id="themes">
+    <div class="container mx-auto px-4">
+      <div class="section-heading">
+        <h3>Creative Layouts</h3>
+        <p>Dashcode comes with multiple prebuilt layouts. So you have the complete freedom to choose your preferred
+          layout depending needs and requirements</p>
+      </div>
+      <div class="section-content mt-16 pb-12 border-b border-b-slate-200">
+        <div class="layoutSlider relative">
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/horizontal-nav-thumb.png" alt="image" loading="lazy">
+            <h3>Horizontal Menu</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/vertical-nav-thumb.png" alt="image" loading="lazy">
+            <h3>Vertical Menu</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/menu-collapsed-thumb.png" alt="image" loading="lazy">
+            <h3>Collapsed Menu</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/floating-nav-thumb.png" alt="image" loading="lazy">
+            <h3>Floating Topbar</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/boxed-thumb.png" alt="image" loading="lazy">
+            <h3>Boxed Layout</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/sidebar-hidden-thumb.png" alt="image" loading="lazy">
+            <h3>Menu Hidden</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/box-v-thumb.png" alt="image" loading="lazy">
+            <h3>Vertical Menu Box Layout</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/bordered-thumb.png" alt="image" loading="lazy">
+            <h3>Bordered Layout</h3>
+          </div>
+          <div class="layoutSlide ">
+            <img src="assets/images/creativeLayouts/thumb/without-nav-thumb.png" alt="image" loading="lazy">
+            <h3>Without Topbar</h3>
+          </div>
+        </div>
+        <div class="layoutPreview">
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/horizontal-nav-light.png" alt="light layout" loading="lazy">
+              <h3>Horizontal Menu Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/horizontal-nav-dark.png" alt="dark layout" loading="lazy">
+              <h3>Horizontal Menu Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/vertical-nav-light.png" alt="light layout" loading="lazy">
+              <h3>Vertical Menu Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/vertical-nav-dark.png" alt="dark layout" loading="lazy">
+              <h3>Vertical Menu Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/menu-collapsed-light.png" alt="light layout" loading="lazy">
+              <h3>Collapsed Menu Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/menu-collapsed-dark.png" alt="dark layout" loading="lazy">
+              <h3>Collapsed Menu Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/floating-nav-light.png" alt="light layout" loading="lazy">
+              <h3>Floating Topbar Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/floating-nav-dark.png" alt="dark layout" loading="lazy">
+              <h3>Floating Topbar Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/boxed-light.png" alt="light layout" loading="lazy">
+              <h3>Boxed Layout Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/boxed-dark.png" alt="dark layout" loading="lazy">
+              <h3>Boxed Layout Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/sidebar-hidden-light.png" alt="light layout" loading="lazy">
+              <h3>Menu Hidden Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/sidebar-hidden-dark.png" alt="dark layout" loading="lazy">
+              <h3>Menu Hidden Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/box-v-dark-light.png" alt="light layout" loading="lazy">
+              <h3>Vertical Menu Box Layout Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/box-v-dark.png" alt="dark layout" loading="lazy">
+              <h3>Vertical Menu Box Layout Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/bordered-light.png" alt="light layout" loading="lazy">
+              <h3>Bordered Layout Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/bordered-dark.png" alt="dark layout" loading="lazy">
+              <h3>Bordered Layout Dark</h3>
+            </div>
+          </div>
+          <div class="block sm:!flex justify-center items-center space-y-4 sm:space-y-0 gap-x-0 gap-y-8 sm:gap-y-0 sm:gap-x-8 pt-12">
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/light/without-nav-light.png" alt="light layout" loading="lazy">
+              <h3>Without Topbar Light</h3>
+            </div>
+            <div class="layoutTheme">
+              <img src="assets/images/creativeLayouts/dark/without-nav-dark.png" alt="dark layout" loading="lazy">
+              <h3>Without Topbar Dark</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Creative layOut End -->
+
+  <!-- Why DashCode Start -->
+  <div class="bgStyle bg-[url('/assets/images/WhyDashcodeBG.png')] pt-12 pb-12 md:pb-36" id="features">
+    <div class="container mx-auto px-3">
+      <div class="pt-10 lg:pt-24">
+        <div class="section-heading">
+          <h3>Why Dashcode</h3>
+          <p>We present you with one of the most developer friendly and highly customizable Vuejs and Vuejs Laravel
+            Admin Dashboard Template of 2022</p>
+        </div>
+        <div class="section-content mt-16 grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-7 ">
+          <div class="whyWeCard bg-slate-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="material-symbols:handshake-outline"></iconify-icon>
+            </div>
+            <h3>Developer Friendly</h3>
+            <p>Specially built for developers to give them freedom while coding.</p>
+          </div>
+          <div class="whyWeCard bg-indigo-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="grommet-icons:technology"></iconify-icon>
+            </div>
+            <h3>Tailwind & Vue JS</h3>
+            <p>A perfect combination for web applications & full-stack development.</p>
+          </div>
+          <div class="whyWeCard bg-cyan-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="mdi:code-braces"></iconify-icon>
+            </div>
+            <h3>Clean Code</h3>
+            <p> Less bulky and clean code with Tailwind and Vue industry standards.</p>
+          </div>
+          <div class="whyWeCard bg-rose-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="carbon:dashboard-reference"></iconify-icon>
+            </div>
+            <h3>Multiple Dashboard</h3>
+            <p>Comes with multiple conceptual prebuilt admin dashboard demos.</p>
+          </div>
+          <div class="whyWeCard bg-indigo-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="fluent-mdl2:documentation"></iconify-icon>
+            </div>
+            <h3>Multiple Themes</h3>
+            <p>Allows you to choose between light, dark and semi dark themes.</p>
+          </div>
+          <div class="whyWeCard bg-rose-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="tabler:layout-dashboard"></iconify-icon>
+            </div>
+            <h3>Multiple Layouts</h3>
+            <p>Switch between layouts to experience a whole new look and feel.</p>
+          </div>
+          <div class="whyWeCard bg-slate-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="iconoir:multiple-pages-add"></iconify-icon>
+            </div>
+            <h3>Component & Pages</h3>
+            <p>A limitless set of building components and pages with dark mode support.</p>
+          </div>
+          <div class="whyWeCard bg-cyan-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="pepicons:paint-pallet"></iconify-icon>
+            </div>
+            <h3>Built-in Customizer</h3>
+            <p>Customizer enables to change look & feel based on their preferences.</p>
+          </div>
+          <div class="whyWeCard bg-slate-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="material-symbols:important-devices-outline-rounded"></iconify-icon>
+            </div>
+            <h3>Fully Responsive</h3>
+            <p>Built with Tailwind, that ensures responsive interfaces for all devices</p>
+          </div>
+          <div class="whyWeCard bg-indigo-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="icon-park-outline:doc-search-two"></iconify-icon>
+            </div>
+            <h3>Well Documented</h3>
+            <p>Comes with a nice documentation to help you get started fast.</p>
+          </div>
+          <div class="whyWeCard bg-cyan-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="material-symbols:browser-updated-rounded"></iconify-icon>
+            </div>
+            <h3>Continuous Updates</h3>
+            <p> Comes with continuous updates to keep you safe from exploitable holes.</p>
+          </div>
+          <div class="whyWeCard bg-rose-100">
+            <div class="whyWeCardIcon">
+              <iconify-icon icon="material-symbols:support-agent-rounded"></iconify-icon>
+            </div>
+            <h3>Active Support</h3>
+            <p> Our support and developer team helps you solve any issues you have.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Why DashCode End -->
+
+  <!-- Counter up Area Start -->
+  <div class="counter bg-gradient-to-b from-[#330867] to-[#170F2A] py-10 lg:py-24">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-8 xl:gap-0" id="counters_1">
+        <div class="counterCard">
+          <h2 class="counter" data-TargetNum="5" data-Speed="1500" data-Easing="linear">5</h2>
+          <h3>Conceptual Dashboard</h3>
+        </div>
+        <div class="counterCard">
+          <h2 class="counter" data-TargetNum="3" data-Speed="1500" data-Easing="linear">3</h2>
+          <h3>Color Schemes</h3>
+        </div>
+        <div class="counterCard">
+          <h2 class="counter" data-TargetNum="9" data-Speed="1500" data-Easing="linear">9</h2>
+          <h3>Layouts</h3>
+        </div>
+        <div class="counterCard">
+          <h2 class="counter" data-TargetNum="6" data-Speed="1500" data-Easing="linear">6</h2>
+          <h3>Applications</h3>
+        </div>
+        <div class="counterCard">
+          <h2> <span class="counter" data-TargetNum="60" data-Speed="1500" data-Easing="linear">0</span> +</h2>
+          <h3>Pages</h3>
+        </div>
+        <div class="counterCard lastCard">
+          <h2> <span class="counter" data-TargetNum="150" data-Speed="1500" data-Easing="linear">0</span> +</h2>
+          <h3>Components</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Counter up Area End -->
+
+  <!-- Applications Area Start -->
+  <div class="application py-10 lg:py-24" id="apps">
+    <div class="container mx-auto px-4">
+      <div class="section-heading">
+        <h3>Application</h3>
+        <p>DashCode includes multiple awesomely designed and carefully crafted applications which enable you to get
+          started and build your applications faster.</p>
+      </div>
+      <div class="secton-content mt-12">
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-7">
+          <div class="applicationCard relative group overflow-hidden border-2 border-slate-300 rounded-lg">
+            <img src="assets/images/application/Dashcode-Chat.png" alt="image">
+            <div
+              class=" transition-all duration-500 group-hover:opacity-100 opacity-100 absolute top-0 bg-slate-900 bg-opacity-70 group-hover:w-full w-0 h-full text-white flex justify-center items-center">
+              <h3 class="opacity-0 group-hover:opacity-100 transition-all duration-500"><a href="#">Chat</a></h3>
+            </div>
+          </div>
+          <div class="applicationCard relative group overflow-hidden border-2 border-slate-300 rounded-lg">
+            <img src="assets/images/application/Dashcode-Email.png" alt="image">
+            <div
+              class=" transition-all duration-500 group-hover:opacity-100 opacity-100 absolute top-0 bg-slate-900 bg-opacity-70 group-hover:w-full w-0 h-full text-white flex justify-center items-center">
+              <h3 class="opacity-0 group-hover:opacity-100 transition-all duration-500"><a href="#">Email</a></h3>
+            </div>
+          </div>
+          <div class="applicationCard relative group overflow-hidden border-2 border-slate-300 rounded-lg">
+            <img src="assets/images/application/Dashcode-Kanban.png" alt="image">
+            <div
+              class=" transition-all duration-500 group-hover:opacity-100 opacity-100 absolute top-0 bg-slate-900 bg-opacity-70 group-hover:w-full w-0 h-full text-white flex justify-center items-center">
+              <h3 class="opacity-0 group-hover:opacity-100 transition-all duration-500"><a href="#">Kanban</a></h3>
+            </div>
+          </div>
+          <div class="applicationCard relative group overflow-hidden border-2 border-slate-300 rounded-lg">
+            <img src="assets/images/application/Dashcode-Calender.png" alt="image">
+            <div
+              class=" transition-all duration-500 group-hover:opacity-100 opacity-100 absolute top-0 bg-slate-900 bg-opacity-70 group-hover:w-full w-0 h-full text-white flex justify-center items-center">
+              <h3 class="opacity-0 group-hover:opacity-100 transition-all duration-500"><a href="#">Calendar</a></h3>
+            </div>
+          </div>
+          <div class="applicationCard relative group overflow-hidden border-2 border-slate-300 rounded-lg">
+            <img src="assets/images/application/Dashcode-Todo.png" alt="image">
+            <div
+              class=" transition-all duration-500 group-hover:opacity-100 opacity-100 absolute top-0 bg-slate-900 bg-opacity-70 group-hover:w-full w-0 h-full text-white flex justify-center items-center">
+              <h3 class="opacity-0 group-hover:opacity-100 transition-all duration-500"><a href="#">Todo</a></h3>
+            </div>
+          </div>
+          <div class="applicationCard relative group overflow-hidden border-2 border-slate-300 rounded-lg">
+            <img src="assets/images/application/Dashcode-Projects.png" alt="image">
+            <div
+              class=" transition-all duration-500 group-hover:opacity-100 opacity-100 absolute top-0 bg-slate-900 bg-opacity-70 group-hover:w-full w-0 h-full text-white flex justify-center items-center">
+              <h3 class="opacity-0 group-hover:opacity-100 transition-all duration-500"><a href="#">Projects</a></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Application Area End -->
+
+  <!-- Awesome Pages Area Start -->
+  <div class="awesomePages relative bg-gradient-to-b from-[#330867] to-[#170F2A] py-10 lg:py-24 overflow-hidden">
+    <img class="absolute w-full h-[120%] left-0 top-1/2 -translate-y-1/2" src="assets/images/frameBG.png" alt="image">
+    <div class="container mx-auto px-4">
+      <div class="section-heading">
+        <h3 class="!text-white">Awesome Pages</h3>
+        <p class="!text-white">Dashcode provides multiple page designs that are built to speed up your development.
+          Don’t go by our words, check out our well-crafted pages</p>
+      </div>
+      <div class="sectionContent mt-12">
+        <div class="swiper-container relative">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Invoice.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Invoice Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Pricing.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Pricing Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Testimonial.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Testimonial Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Faq.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Faq Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Blog.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Blog Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-404.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Error 404 Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Comming-soon.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Coming Soon Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Under-construction.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Under Construction Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Login.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">SignIn Page 01</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Reg2.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">SignUp Page 02</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Forgot-password3.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Forgot Password Page 03</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Profile.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Profile Page</h3>
+            </div>
+            <div class="swiper-slide">
+              <div class="picture">
+                <img src="assets/images/awesomePages/Dashcode-Comming-soon.png" alt="" loading="lazy">
+              </div>
+              <h3 class="">Settings Page</h3>
+            </div>
+
+          </div>
+          <!-- If we need navigation buttons -->
+          <div
+            class="swiper-prev w-12 h-12 rounded-full bg-white text-xl flex items-center justify-center absolute top-1/2 -translate-y-1/2 z-40 left-1 hover:bg-slate-700 hover:text-white transition-all duration-300">
+            <iconify-icon icon="ph:arrow-left-bold"></iconify-icon>
+          </div>
+          <div
+            class="swiper-next w-12 h-12 rounded-full bg-white text-xl flex items-center justify-center absolute top-1/2 -translate-y-1/2 z-40 right-1 hover:bg-slate-700 hover:text-white transition-all duration-300">
+            <iconify-icon icon="ph:arrow-right-bold"></iconify-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Awesome Pages Area End -->
+
+  <!-- Advanced Elements Area Start -->
+  <div class="advancedElements py-10 lg:py-24" id="pages">
+    <div class="container mx-auto px-4">
+      <div class="section-heading">
+        <h3>Advanced Elements</h3>
+        <p>DashCode comes with 80+ elements that include cards, statistics, weather, charts, and maps and can be easily
+          used anywhere in the project.</p>
+      </div>
+      <div class="section-content mt-12">
+        <img src="assets/images/advancedElements.jpg" alt="image" loading="lazy">
+      </div>
+    </div>
+  </div>
+  <!-- Advanced Elements Area End -->
+
+  <!-- Components Area Start -->
+  <div class="component bgStyle bg-[url('/assets/images/CreativeLayoutBG.png')] py-10 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="section-heading">
+        <h3>Components</h3>
+        <p>Dashcode provides an extensive collection of components. Our components are themed with tailwind principles
+          and created perfect design parallelism.</p>
+      </div>
+      <div class="section-content mt-12">
+        <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-7">
+          <div class="componentCard">
+            <iconify-icon icon="line-md:alert"></iconify-icon>
+            <h3>Alerts</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="heroicons:user"></iconify-icon>
+            <h3>Avatar</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="heroicons:bars-3-20-solid"></iconify-icon>
+            <h3>Accordion</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="tabler:badges"></iconify-icon>
+            <h3>Badges</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="et:attachments"></iconify-icon>
+            <h3>Buttons</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="material-symbols:add-card-outline"></iconify-icon>
+            <h3>Card</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="material-symbols:view-carousel-outline"></iconify-icon>
+            <h3>Carousel</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="mdi:form-dropdown"></iconify-icon>
+            <h3>Dropdown</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="material-symbols:date-range-outline-rounded"></iconify-icon>
+            <h3>Date Picker</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="mdi:image-multiple-outline"></iconify-icon>
+            <h3>Image</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="teenyicons:box-outline"></iconify-icon>
+            <h3>Modal</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="ph:dots-three-outline"></iconify-icon>
+            <h3>Pagination</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="carbon:progress-bar"></iconify-icon>
+            <h3>Progress Bar</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="entypo:popup"></iconify-icon>
+            <h3>Popover</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="ph:placeholder"></iconify-icon>
+            <h3>Placeholder</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="fluent:table-bottom-row-32-regular" rotate="180deg"></iconify-icon>
+            <h3>Tabs</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="mdi:tooltip-text-outline"></iconify-icon>
+            <h3>Tooltip</h3>
+          </div>
+          <div class="componentCard">
+            <iconify-icon icon="material-symbols:video-camera-back-outline-rounded"></iconify-icon>
+            <h3>Video</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Components Area End -->
+
+  <!-- Pricing Area Start -->
+  <div class="pricing py-10 lg:py-24 bgStyle bg-[url('/assets/images/WhyDashcodeBG.png')]" id="pricing">
+    <div class="container mx-auto px-4">
+      <div class="grid  xl:grid-cols-7 gap-16">
+        <div class="saveMoney hidden xl:flex col-span-2 flex-col justify-between">
+          <div class="textArea">
+            <h3>Save Your <strong>Money Now</strong></h3>
+            <p>If you’re a developer looking for an admin dashboard that is developer-friendly, rich with features, and highly customizable look no further than DashCode. We offer very simple pricing depending on your needs.</p>
+          </div>
+          <img src="assets/images/Plants.png" alt="image" loading="lazy">
+        </div>
+        <div class="xl:col-span-5">
+          <div class="section-heading2 max-w-5/12">
+            <h3>Our Best <br class="hidden lg:inline-block"><strong>Pricing Plan</strong> For You</h3>
+          </div>
+          <div class="grid md:grid-cols-2 gap-16">
+            <div class="pricingCard">
+              <div class="heading">
+                <div>
+                  <h3>Regular</h3>
+                  <p>License</p>
+                </div>
+                <h3 class="price">$9</h3>
+              </div>
+              <div class="pricingList mt-6 md:mt-12">
+                <h4>What’s Included</h4>
+                <ul class="mt-4 md:mt-7">
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Quality checked by Envato.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Life time support.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> For Personal Project only.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Permitted for one domain
+                    for personal use only.
+                  </li>
+                  <li>
+                    <iconify-icon class="uncheck" icon="material-symbols:close-rounded"></iconify-icon> Skype support.
+                  </li>
+                  <li>
+                    <iconify-icon class="uncheck" icon="material-symbols:close-rounded"></iconify-icon>
+                    Anydesk/Teamviewer support.
+                  </li>
+                  <li>
+                    <iconify-icon class="uncheck" icon="material-symbols:close-rounded"></iconify-icon> Free
+                    installation.
+                  </li>
+                </ul>
+                <a href="https://themeforest.net/item/dashcode-admin-dashboard-template/42600453" class="defaultButton"><span>Buy Now</span></a>
+              </div>
+            </div>
+            <div class="pricingCard extendedPrice">
+              <div class="heading">
+                <div>
+                  <h3>Extend</h3>
+                  <p>License</p>
+                </div>
+                <h3 class="price">$299</h3>
+              </div>
+              <div class="pricingList mt-6 md:mt-12">
+                <h4>What’s Included</h4>
+                <ul class="mt-4 md:mt-7">
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Quality checked by Envato.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Life time support.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> For Commercial Projects.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> For multiple domain
+                    & professional use.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Skype support.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Anydesk/Teamviewer
+                    support.
+                  </li>
+                  <li>
+                    <iconify-icon class="check" icon="material-symbols:check"></iconify-icon> Free installation.
+                  </li>
+                </ul>
+                <a href="https://themeforest.net/item/dashcode-admin-dashboard-template/42600453" class="defaultButton"><span>Buy Now</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pricing Area End -->
+
+  <!-- Faq Area Start -->
+  <div class="faq bgStyle bg-[url('/assets/images/FAQBackground.png')] py-10 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="section-heading">
+        <h3>FAQs</h3>
+        <p>Have some questions on your mind? Here we added a few answers to frequently asked questions. If you want to
+          know something is not listed here, just contact us.</p>
+      </div>
+      <div class="sectoinContent mt-12">
+        <div class="accordion">
+          <div class="grid lg:grid-cols-2 gap-1 lg:gap-7">
+            <div class="acc">
+              <div class="acc__card">
+                <div class="acc__title active bg-indigo-100">Is it really worth it?</div>
+                <div class="acc__panel bg-indigo-50" style="display: block;">
+                  <p>A powerful admin template is like a high-end car. Each of its components is built carefully and
+                    keeps efficiency in mind. Dashcode is specially built for developers to give them freedom while
+                    coding. Dashcode provides you with the simplest and fastest way to build web UI for your dashboard
+                    or app. So we can assure you that DashCode is really worth your money.</p>
+                </div>
+              </div>
+              <div class="acc__card">
+                <div class="acc__title bg-cyan-100">What skills do I need to have to use DasCode?</div>
+                <div class="acc__panel bg-cyan-50">
+                  <p>DasCode is a Tailwind and Vue admin template. To use it efficiently general knowledge of Front-end
+                    development is required. You might need more in-depth skills in Vue and Tailwind to customize
+                    components. Also, keep in mind that the template does not contain the back end. To make an end
+                    product you need to have knowledge or help with the back-end part.</p>
+                </div>
+              </div>
+              <div class="acc__card">
+                <div class="acc__title bg-violet-100">Will you regularly give updates on DashCode?</div>
+                <div class="acc__panel bg-violet-50">
+                  <p>Yes, We will update the DashCode regularly. All future updates would be available without any cost.
+                    Once you purchase a license, you'll receive all future releases for free.</p>
+                </div>
+              </div>
+            </div>
+            <div class="acc">
+              <div class="acc__card">
+                <div class="acc__title active bg-indigo-100">Do you provide any design frames?</div>
+                <div class="acc__panel bg-indigo-50" style="display: block;">
+                  <p>Dashcode does not come with the Figma design files. If you want the Figma file you can contact our
+                    support team to get the design file for free. You can copy the frames, and customize them as you
+                    want in your Figma project.</p>
+                </div>
+              </div>
+              <div class="acc__card">
+                <div class="acc__title bg-cyan-100">What’s the difference between regular and extended licenses?</div>
+                <div class="acc__panel bg-cyan-50">
+                  <p>What’s the difference between regular and extended licenses? The regular license can be used for
+                    non-commercial end products (access is free and there will be no monthly
+                    subscription fee). You need to buy a new single regular license for each product you make or each
+                    domain you use if you set up it on multiple domains. An extended license can be used for end
+                    products (web service or SaaS) that charge users for access or service (e.g: monthly subscription
+                    fee). For more info on Themeforest licenses, you can check <a
+                      href="http://themeforest.net/licenses/standard?license=regular">here.</a></p>
+                </div>
+              </div>
+              <div class="acc__card">
+                <div class="acc__title bg-violet-100">How do I get help with the theme?</div>
+                <div class="acc__panel bg-violet-50">
+                  <p>Use our support portal to get support. Register for your account and create a support ticket to get
+                    support. Your dedicated support team will assist you to solve your issue.
+                  </p>
+                </div>
+              </div>
+              <div class="acc__card">
+                <div class="acc__title bg-violet-100">What’s your refund policy?</div>
+                <div class="acc__panel bg-violet-50">
+                  <p>Given the nature of digital content, a refund or credit on a purchase is not granted unless one of
+                    the promises given by the author in <a
+                      href="https://themeforest.net/legal/market#what-authors-promise">section 21</a> has been breached,
+                    or a refund is required under the <a
+                      href="https://themeforest.net/page/customer_refund_policy">Envato Market Refund Rules</a> or
+                    Australian consumer law, or other relevant consumer protection laws.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Faq Area End -->
+
+  <!-- Footer Area Start -->
+  <div class="footer" id="contact">
+    <!-- Newsletter Area Start -->
+    <div class="newsletterArea">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="section-content">
+            <div class="content supportCard">
+              <h4>Support</h4>
+              <h3>Need Any Support?</h3>
+              <h5>Feel to free contact with us</h5>
+              <p>If you need any kind of support or fixes in this system feel free to contact us via our support portal.</p>
+              <a href="https://codeshaperbd.freshdesk.com/support/login" target="_blank" class="defaultButton"><span>Get
+                  Support</span></a>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="content">
+              <h4>Coming Soon</h4>
+              <h3>New Version Coming Soon!</h3>
+              <ul class="versionName space-x-2 py-3">
+                <li>HTML</li>
+                <li>NUXT</li>
+                <li>Laravel</li>
+              </ul>
+              <p>We’ll keep publishing new versions. Subscribe to our newsletter to get notified when we publish our new version.</p>
+              <form id="newsletterForm">
+                <input type="email" name="email" id="newsletterEmail" placeholder="Your email address" required>
+                <button type="submit" class="defaultButton" id="newsletterSubmit"><span>Notify Me</span></button>
+              </form>
+              <!-- For From Submit Response -->
+              <div>
+                <div id="response">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Newsletter Area End -->
+
+    <div class="py-10 lg:py-24 max-w-3xl mx-auto text-center">
+      <div class="logo flex items-center justify-center">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 6C0 2.68629 2.68629 0 6 0H42C45.3137 0 48 2.68629 48 6V48H6C2.68629 48 0 45.3137 0 42V6Z"
+            fill="white" />
+          <path
+            d="M31.4 38.36C29.624 38.36 27.968 38.036 26.432 37.388C24.92 36.74 23.6 35.828 22.472 34.652C21.344 33.476 20.468 32.12 19.844 30.584C19.244 29.024 18.944 27.356 18.944 25.58C18.944 23.804 19.244 22.148 19.844 20.612C20.468 19.052 21.332 17.696 22.436 16.544C23.564 15.392 24.884 14.492 26.396 13.844C27.908 13.196 29.54 12.872 31.292 12.872C33.188 12.872 34.88 13.208 36.368 13.88C37.88 14.552 39.2 15.476 40.328 16.652L38.528 18.452C37.664 17.492 36.62 16.748 35.396 16.22C34.172 15.668 32.804 15.392 31.292 15.392C29.9 15.392 28.616 15.644 27.44 16.148C26.288 16.652 25.268 17.372 24.38 18.308C23.516 19.22 22.844 20.3 22.364 21.548C21.908 22.772 21.68 24.116 21.68 25.58C21.68 27.044 21.92 28.4 22.4 29.648C22.88 30.896 23.552 31.988 24.416 32.924C25.28 33.836 26.3 34.544 27.476 35.048C28.652 35.552 29.936 35.804 31.328 35.804C32.912 35.804 34.316 35.528 35.54 34.976C36.788 34.424 37.844 33.668 38.708 32.708L40.508 34.544C39.404 35.72 38.084 36.656 36.548 37.352C35.012 38.024 33.296 38.36 31.4 38.36Z"
+            fill="#0F172A" />
+          <path
+            d="M11.94 38V33.644H18.384C20.016 33.644 21.444 33.308 22.668 32.636C23.892 31.94 24.84 30.968 25.512 29.72C26.208 28.472 26.556 26.996 26.556 25.292C26.556 23.636 26.208 22.196 25.512 20.972C24.816 19.724 23.856 18.764 22.632 18.092C21.408 17.396 19.992 17.048 18.384 17.048H11.832V12.692H18.456C20.328 12.692 22.056 13.004 23.64 13.628C25.248 14.252 26.64 15.14 27.816 16.292C29.016 17.42 29.94 18.752 30.588 20.288C31.26 21.824 31.596 23.504 31.596 25.328C31.596 27.152 31.26 28.844 30.588 30.404C29.94 31.94 29.028 33.284 27.852 34.436C26.676 35.564 25.284 36.44 23.676 37.064C22.092 37.688 20.376 38 18.528 38H11.94ZM8.592 38V12.692H13.488V38H8.592Z"
+            fill="#0F172A" />
+        </svg> <span class="ml-3 font-Outfit font-semibold text-white text-3xl sm:text-4xl leading-8">Dashcode</span>
+      </div>
+      <p class="text-white font-Outfit text-lg mt-6">Dashcode present you with the most powerful, simplest, and fastest
+        developer-friendly and highly customizable Tailwind and Vue admin templates to build web UI for your app.</p>
+      <div class="groupButton space-x-1 md:space-x-6">
+        <a href="https://themeforest.net/item/dashcode-admin-dashboard-template/42600453" class="defaultButton"><span>Buy Now</span></a>
+        <a href="https://dashcode.codeshaper.net/" target="_blank" class="defaultButton"><span>View Demo</span></a>
+        <a href="https://codeshaperbd.freshdesk.com/support/login" target="_blank" class="defaultButton"><span>Get
+            Support</span></a>
+      </div>
+      <p class="font-Outfit font-normal text-base sm:text-xl leading-8 text-white mt-6">Copyright ©
+        <script>document.write(new Date().getFullYear())</script> <a href="#">Dashcode</a>. All rights Reserved. <br>
+        Hand-crafted & Made by <span class="text-red-500">&#10084;</span> <a href="https://codeshaper.net/"
+          target="_blank">Codeshaper</a>.
+      </p>
+    </div>
+  </div>
+  <!-- Footer Area End -->
+
+  <!-- Links Of Js -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+  <script src="assets/js/simplyScroll.js"></script>
+  <script src="assets/js/multi-animated-counter.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/TweenMax.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
